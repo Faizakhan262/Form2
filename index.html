@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Document</title>
+    <link rel="stylesheet" href="index.css"/>
+</head>
+
+<body>
+    <h1>APPLICATION  FORM</h1>
+    
+    <br><br>
+   <h3>ENTER YOUR INFORMATION</h3>
+    <h4>NAME:</h4>
+    
+  <input type="text" id="input-el" placeholder="enter name" />
+  <button id="input-butn">ENTER</button>
+
+     <h4>PASSWORD:</h4>
+
+  <input type="password" id="input-ela" placeholder="enter password" />
+  <button id="input-btn">ENTER</button>
+
+  <h4>EMAIL:</h4>
+
+  <input type="email" id="input-elb" placeholder="enter email"/>
+  <button id="input-but">ENTER</button>
+   <p id="lead-link"></p>
+	
+   <h4>PHONE NUMBER:</h4>
+
+  <input type="text" id="input-elc" placeholder="enter Phone number"/>
+  <button id="input-bt">ENTER</button>
+   <p id="lead-link"></p>
+	
+    
+    <script >
+
+    
+    
+    const inputel=document.getElementById("input-el"); 
+    const butn=document.getElementById('input-butn');
+    
+    const inputela=document.getElementById("input-ela"); 
+    const btn=document.getElementById('input-btn');
+   
+    const inputelb=document.getElementById("input-elb"); 
+    const but=document.getElementById('input-but');
+
+    const inputelc=document.getElementById("input-elc"); 
+    const bt=document.getElementById('input-bt');
+
+    const leadsel=document.getElementById("lead-link");
+    
+    
+    butn.addEventListener("click",function(){
+
+        leadsel.innerHTML += inputel.value
+        localStorage.setItem("name",JSON.stringify(inputel.value))
+    }     
+            
+ )
+     btn.addEventListener("click",function(){
+
+
+       leadsel.innerHTML += inputela.value
+       localStorage.setItem("password",JSON.stringify(inputela.value))
+}     
+    
+)
+      but.addEventListener("click",function(){
+
+
+leadsel.innerHTML += inputelb.value
+localStorage.setItem("EMAIL",JSON.stringify(inputelb.value))
+}     
+    
+)
+bt.addEventListener("click",function(){
+
+
+leadsel.innerHTML += inputelc.value
+localStorage.setItem("phonenumber",JSON.stringify(inputelc.value))
+}     
+    
+)
+
+
+    
+    </script>                                                                                                                                                                                                                                                                                         
+      
+
+
+
+
+</body>
+</html>
